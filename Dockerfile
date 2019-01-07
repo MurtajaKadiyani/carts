@@ -4,7 +4,7 @@ COPY . .
 RUN mvn package \
     && mv target/carts.jar /run \
     && rm -rf /opt/carts/*
-EXPOSE 80
+EXPOSE 8080
 CMD java -jar /run/carts.jar --port=80
 
 
